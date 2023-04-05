@@ -46,7 +46,8 @@ CUDA version that GPU driver supports.
 
 #### C++
 ##### Prerequisites
-- Visual Studio 2022 [Download installer](https://visualstudio.microsoft.com/vs/)
+- Visual Studio 2022 
+>- [Download installer](https://visualstudio.microsoft.com/vs/)
 >- After the installer is installed, Find workload to choose workloads.
 >- Choose the "Desktop delvelopment with C++" workload and install.
 >- For more information of installation Visual Studio 2022 check [Insatll C and C++ suport in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170)
