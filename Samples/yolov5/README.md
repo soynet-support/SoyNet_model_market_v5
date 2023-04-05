@@ -4,6 +4,8 @@ YOLOv5 is a family of object detection architectures and models pretrained on th
   
 SoyNet YOLOv5 support YOLOv5l6, YOLOv5m6, YOLOv5s6, and YOLOv5n6.
 
+
+
 # Environments   
 #### NVIDIA Development Environment
 CUDA version that GPU driver supports.
@@ -42,13 +44,15 @@ CUDA version that GPU driver supports.
 ### Installation
 * Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/SoyNet_v5.1.0)
 
-#### c++
+#### C++
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
   - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
   - Run ww.py on cmd as the following:
-  - Example for ww.py:
- 	- set environment to running ww.py 
+ 	```python
+  	python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
+  	```
+  	- set environment to running ww.py 
 	```python
 	pip install -r requirements.txt  # install 
 	```
@@ -57,10 +61,10 @@ CUDA version that GPU driver supports.
 		- File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
 	- Help is available by typing:
 	```python ww.py -h```
-  ```python
-  python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
-  #python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
-  ```
+  - Example for ww.py:
+  	```
+  	python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
+  	```
 3.  Make sure main.cpp in https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples is set to run the model you want to run:
 ```c++
 //Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
@@ -74,8 +78,6 @@ int main() {
 }
 ```
 4. Run
-
-If you cannot create an engine, review the configuration settings again.
 
 Contact [SOYNET](https://soynet.io/#/contact-us).
 
