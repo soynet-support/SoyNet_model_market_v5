@@ -7,14 +7,14 @@
 
 #### Core technology of SoyNet
 
-- Accelerate model inference by maximizing the utilization of numerous cores on the GPU without compromising accuracy (2x to 5x compared to Tensorflow).
-- Minimize GPU memory usage (1/5~1/15 level compared to Tensorflow).
+- Accelerate model inference by maximizing the utilization of numerous cores on the GPU without compromising accuracy (2x to 5x compared to Tensorflow or Pytorch).
+- Minimize GPU memory usage down to 1/5~1/15 of Tensorflow or Pytorch.
 
-   ※ Performance varies depends on the model and configuration environment.
+   ※ Performance varies depending on model and/or configuration environment.
    
 #### Benefit of SoyNet
 
-- can support customer to  provide AI applications and AI services in time. (Time to Market)
+- can support customer to provide AI applications and AI services in time. (Time to Market)
 - can help application developers to easily execute AI projects without additional technical AI knowledge and experience.
 - can help customer to reduce H/W (GPU, GPU server) or Cloud Instance cost for the same AI execution. (inference)
 - can support customer to respond to real-time environments that require very low latency in AI inference.
@@ -23,8 +23,7 @@
 
 - Dedicated engine for inference of deep learning models.
 - Supports NVIDIA GPUs
-- library files to be easiliy integrated with customer applications
-dll file (Windows)
+- library files to be easiliy integrated with customer applications dll file (Windows)
 - We can provide c++ and python executable files.
 
 ## Folder Structure
@@ -82,7 +81,7 @@ dll file (Windows)
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0)
  
-    ※ You need to use .dll and .so files that match CDUA and TensorRT versions. If you want another version, Please contact [SoyNet](https://soynet.io/).
+    ※ You need to use .dll and .so files that match CUDA and TensorRT versions. If you want another version, Please contact [SoyNet](https://soynet.io/).
     
 #### H/W
  - Tested GPU architecture : Pascal/Volta/Turing/Ampere/Ada Lovelac (ex: for PC Nvidia GTX 10xx, RTX 20xx/30xx/40xx, etc)
