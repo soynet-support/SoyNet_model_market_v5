@@ -46,14 +46,14 @@ CUDA version that GPU driver supports.
   - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
   - Run ww.py on cmd as the following:
   - Example for ww.py:
-  	- python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
 	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
 	- Output_file_path: "../../../mgmt/weights/" + file_name
 		- File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
 	- Help is available by typing:
 	```python ww.py -h```
   ```python
-  python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
+  python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
+  #python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
   ```
 3.  Make sure main.cpp in https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples is set to run the model you want to run:
 ```c++
