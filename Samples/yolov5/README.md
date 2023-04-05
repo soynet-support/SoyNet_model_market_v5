@@ -68,14 +68,14 @@ CUDA version that GPU driver supports.
   >	- Output_file_path: "../../../mgmt/weights/" + file_name
   >     - File name is set in [yolov5.cpp](https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp)
   >	- Help is available by typing:
-  >	```python ww.py -h```
+  >		```python ww.py -h```
   >   - Example for ww.py:
-  > 	```
-  > 	python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
-  > 	```
+  > 		```
+  > 		python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
+  > 		```
 3. Open SoyNetV5.sln from [SoyNetV5 folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
-4.  Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
-```c++
+4. Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
+```C++
 //Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
 int yolov5();	
 int yolov8();
@@ -86,12 +86,12 @@ int main() {
 	//yolov8();
 }
 ```
-4. Run in Visual Studio
+5. Run in Visual Studio
 
 # Reference
  - [Original Code](https://github.com/ultralytics/yolov5)
 
 # Acknowlegement
 
-Yolov5 is under GNU General Public License. 
+YOLOv5 is under GNU General Public License. 
 See License terms and condition: [License](https://github.com/ultralytics/yolov5/blob/master/LICENSE)
