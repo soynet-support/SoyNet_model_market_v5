@@ -50,7 +50,7 @@ CUDA version that GPU driver supports.
 >- [Download installer](https://visualstudio.microsoft.com/vs/)
 >- After the installer is installed, Find workload to choose workloads.
 >- Choose the "Desktop delvelopment with C++" workload and install.
->- For more information of installation Visual Studio 2022 check [Insatll C and C++ suport in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170)
+>- For more information of installation Visual Studio 2022 check [Insatll C and C++ support in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170)
 
 #### Setup
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
