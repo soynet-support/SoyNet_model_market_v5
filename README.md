@@ -38,7 +38,6 @@
    |  |  └─model.cpp    : execution file
    |  └─main.cpp        : main on c++
    ├─SamplesPy          : sample code on python 
-   ├─SoyNetV5           : include SoyNetV5.sln for running c++ code
    ├─bin                : *.dll file for running soynetV5
    ├─data               : sample data(such as jpg, mp4..) for sample code
    ├─include            : header file for soynetV5
