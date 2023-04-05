@@ -1,0 +1,12 @@
+﻿  yolov8.cpp
+E:\DEV-5.1.0-github\3party\opencv-4.6.0\include\opencv2\core.hpp(1746,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+E:\DEV-5.1.0-github\3party\opencv-4.6.0\include\opencv2\core.hpp(1746,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+E:\DEV-5.1.0-github\3party\opencv-4.6.0\include\opencv2\core.hpp(1746,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+E:\DEV-5.1.0-github\Samples\yolov8\yolov8.cpp(183,32): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\DEV-5.1.0-github\Samples\yolov8\yolov8.cpp(185,37): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  1 of 386 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  Samples.vcxproj -> E:\DEV-5.1.0-github\output\Release\Samples.exe

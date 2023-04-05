@@ -1,0 +1,277 @@
+layer	key	ktype	init	symbol	require	desc	pytorch	tensorflow
+model	name	s			1			
+model	make_engine	i32	1		0			
+model	plugin_dir	s			0			
+model	dict_file	s			0			
+model	user_dict_file	s			0			
+model	license_db	s			0			
+model	license_file	s			0			
+model	device_id	i32			0			
+model	plugin_type	s	dynamic		0			
+model	explicit_batch	i32	1		0			
+model	engine_file	s			1			
+model	weight_file	s			1			
+model	use_cache	i32	1		0			
+model	cache_file	s			0			
+model	log_con	i32	1		0			
+model	log_file	s			0			
+model	log_dir	s			0			
+model	log_db	s			0			
+model	disp_model	s			0			
+model	prec_mode	s	f32	"f32,f16,tf32"	0			
+input	shape	vi32			1			
+input	opt_shape	vi32			0			
+input	min_shape	vi32			0			
+input	max_shape	vi32			0			
+input	dtype	s		"i8,u8,i32,u32,f16,f32"	1			
+input	refname	s			1			
+output	refname	vs			1			
+base	version	s			0			
+base	act	s	identity	"linear,identity,relu,silu,swish,leaky,sigmoid,tanh,gelu,relu6,elu,selu,softsign,softplus,scaled_tanh,hard_sigmoid,clip,relu6,mish,gelu2"	0	"?????? ?????? ??????, otherwise custom layer?? ???????? ??"		
+base	act_alpha	f32			0			
+base	act_beta	f32			0			
+base	prec_mode	s	f32	"i8,u8,f16,f32"	0	model?? ?????? ???? default?? ????.		
+base	input	vs	*		0			
+base	name	s			0	"?????? ?????? ??????, otherwise custom layer?? ???????? ??"		
+base	refname	vs			0			
+activation	backward	i32	0		0	backpropagation ????		
+einreshape	mode	s	palm	"generic,palm"	0			
+softmax	mode	s	generic	"generic,algo1"	0			
+softmax	axis	i32	-1		0			
+einmask	mode	s	palm	"generic,palm"	0			
+rotemb	mode	s	palm	"generic,palm"	0			
+nms_merge	mode	s		"yolov8,yolov5"	1			
+nms_merge	result_count	i32	50		0			
+nms_merge	org_size	vi32			0			
+embed	mode	s		vit_b32	0			
+embed	table_shape	vi32			0	"?????? ?????? ????, fastspeech???? reps?? ENC?? ?????? ???????? ENC?? embed table?? ??????"		
+posemb	mode	s		fastspeech	1			
+posemb	emb_len	i32	384		0			
+sum	mode	s			0			
+sum	nbtext	i32			0			
+reg_len	mode	s		fastspeech	0			
+reg_len	mel_max_len	i32	100000		0			
+clamp	mode	s		maskrcnn	1			
+clamp	value	vi32			0			
+clamp_exp_m1_0_75	mode	s		fastspeech	0	only for fastspeech model		
+norm	mode	s		"gleanx8,palm,bert,covidetect,transformer,instance,transpose,layer,swin-transformer,nafnet,vit_b32"	1			
+norm	eps	f32	0		0			
+norm	weight_order	s			0			
+norm	axis	i32	-2		0			
+unfold	axis	i32			1			
+unfold	size	i32			1			
+unfold	step	i32			1			
+dense	hidden	i32			1			
+dense	weight	vs			0	???? ???? weight?? ?????? ????		
+dense	refweight	vs			0	???? ?????? ?????? weight?? ?????? ?? ?????? ??		
+dense	weight_order	s	wa		0	"???????? convolution???? ??????????, weight shape=[c,hidden]"		
+reshape	shape	vi32			0			
+trans	order	vi32			1			
+conv2d	channel	i32			1		out_channels	filters
+conv2d	kernel	vi32			1		kernel_size	kernel_size
+conv2d	stride	vi32	1		0		stride	strides
+conv2d	pad	vi32	"0,0,0,0"		0	tblr		
+conv2d	pad_tf	s		"same,valid,pad,alexeyab"	0	"tensorflow ?????? pad_tblr?? ???????? ???? symbol?????? ""pad""?? ????, pad?? ?????? tblr???? ????????."		
+conv2d	dilation	vi32	1		0		dilation	dilation_rate
+conv2d	group	i32	1		0		groups	groups
+conv2d	scale	f32	1		0	inception-resnet-v2???? weight?? ??????		
+conv2d	weight_order	s	wa		0			
+conv2d	bn_eps	f32	1.00E-05		0			
+conv2d	weight	vs			0	???? ?????? ?????? weight?? ?????? ?? ?????? ??		
+isinf	alt_val	f32			1	inf???? alt_val?? ????		
+astsm	mode	s		fastspeech	1	only for fastspeech model		
+audio_skip	mode	s		fastspeech	1	only for fastspeech model		
+audio_sb	mode	s		fastspeech	1	only for fastspeech model		
+fade_out	mode	s		fastspeech	1	only for fastspeech model		
+fade_out	fade_len	i32			1	only for fastspeech model		
+bn	weight_order	s	wa		0			
+bn	bn_eps	f32	1.00E-05		0			
+bn	weight	vs			0	???? ?????? ?????? weight?? ?????? ?? ?????? ??		
+bn	refweight	vs			0	???? ???? weight?? ?????? ????		
+roll	mode	s		swin-transformer	0	"swin: NHWC로 입력이 올때 H,W에 대해서 shift만큼 텐서를 민것.(torch.roll참고)"		
+roll	shift	vi32			0	"swin: 2차원vector, 음수가능."		
+roll	axis	vi32			0			
+conv1d	channel	i32			1		out_channels	filters
+conv1d	kernel	i32			1		kernel_size	kernel_size
+conv1d	stride	i32	1		0		stride	strides
+conv1d	pad	vi32	"0,0"		0	tb		
+conv1d	pad_tf	s		"same,valid,pad,alexeyab"	0	"tensorflow ?????? pad_tblr?? ???????? ???? symbol?????? ""pad""?? ????, pad?? ?????? tblr???? ????????."		
+conv1d	dilation	i32	1		0		dilation	dilation_rate
+conv1d	group	i32	1		0		groups	groups
+conv1d	scale	f32	1		0	inception-resnet-v2???? weight?? ??????		
+conv1d	weight_order	s	wa		0			
+conv1d	bn_eps	f32	1.00E-05		0			
+conv1d	weight	vs			0	???? ?????? ?????? weight?? ?????? ?? ?????? ??		
+conv1d	refweight	vs			0	???? ???? weight?? ?????? ????		
+scale	scale	f32	1		0			
+scale	shift	f32	0		0			
+scale	power	f32	1		0			
+const	shape	vi32			1		"input?? ??????, ???? ?????????? ??????."	
+const	dtype	s		"i32,f32"	1			
+const	transform	s		"wino_kernel_64,wino_data_64"	0			
+const	value	vf32			0			
+expand	factor	vi32			1			
+slice	start	vi32			1		stride	
+slice	shape	vi32			1			
+slice	stride	vi32			0			
+slice	mode	s		"ocr-craft,dynamic"	0			
+split	axis	i32			1			
+split	count	i32			1	?????? ????		
+bconv2d	mode	s	gleanx8	gleanx8	0		stride	
+bconv2d	stride	vi32	"1,1"		0		stride	
+bconv2d	pad	vi32	"0,0,0,0"		0	tblr		
+bconv2d	dilation	vi32	"1,1"		0		dilation	dilation_rate
+concat	mode	s		"m2m,deit"	0			
+concat	batch	i32			0			
+concat	axis	i32	-1		0	"batch???? ????????, axis=0 ???? ????, axis=-1?? ????????."		
+shape	mode	s			0			
+bdeconv2d	mode	s			0			
+bdeconv2d	stride	vi32	1		0		stride	
+bdeconv2d	pad	vi32	"0,0,0,0"		0	tblr		
+bdeconv2d	pad_tf	s		"same,valid,pad,alexeyab"	0	"tensorflow ?????? pad_tblr?? ???????? ???? symbol?????? ""pad""?? ????, pad?? ?????? tblr???? ????????."		
+bdeconv2d	dilation	vi32	1		0		dilation	
+bdeconv2d	group	i32	1		0		groups	
+bdeconv2d	scale	f32	1		0	inception-resnet-v2???? weight?? ??????		
+bdeconv2d	output_pad	vi32	"0,0"		0			
+bdeconv2d	weight	vs			0	???? ?????? ?????? weight?? ?????? ?? ?????? ??		
+bdeconv2d	refweight	vs			0	???? ???? weight?? ?????? ????		
+upfirdn2d	mode	s		gleanx8	0	GLEAN (https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/glean/README.md) IconVSR (https://github.com/open-mmlab/mmediting/blob/master/configs/restorers/iconvsr/README.md).		
+upfirdn2d	up_down	vi32			0			
+upfirdn2d	kernel	vi32			0			
+upfirdn2d	pad	vi32			0			
+pool2d	mode	s	max	"max,avg,adapavg,adapmax,nafnet"	0			
+pool2d	kernel	vi32			0	gavg?? ???? ???????? ????????.		
+pool2d	stride	vi32	"1,1"		0	"h,w"		
+pool2d	pad	vi32	"0,0,0,0"		0	tblr		
+pool2d	pad_tf	s		"same,valid,pad,alexeyab"	0	tblr		
+pool2d	count_include_pad	i32	0		0			
+pool2d	ceil_mode	i32	0		0	"??????, ?????? pading?? 1???? ?????????? ????. P,Q?? 1 ???? ???????? ?? ?????????? ?????? ??????."		
+pool2d	dilation	vi32	"1,1"		0	"h,w"		
+pool2d	output_size	vi32	"1,1"		0	"h,w"		
+preproc	mode	s		"generic,fcn8,wav2lip-face-detect,wav2lip"	1	"generic?????? pad, norm, bgr, chw?? ????"		
+preproc	mean	vf32	"0,0,0"		0	rgb????		
+preproc	std	vf32	"1,1,1"		0	rgb????		
+preproc	hwc	i32			0	 hwc -> chw ?? ?????? 1		
+preproc	bgr	i32			0	bgr -> rgb?? ?????? 1		
+preproc	pad	vi32			0	"top ,bottom ,left ,right ?????? ????"		
+preproc	pad_value	vf32			0	"r,g,b ???? (e.g pad_value=114,114,114)"		
+preproc	pre_order	vi32			0	0 = normalize 1 = padding		
+preproc	arg	s			0			
+pixelshuffle	factor	i32			1			
+eltwise	mode	s		"add,sum,prod,mul,max,min,sub,div,pow,floor,remainder,mod"	1			
+eltwise	scale	vf32	1		0			
+simpleop	mode	s		"add,sum,prod,recip,mul,round,log,floor,abs,sqrt,exp,sin,cos,tan,sinh,cosh,asin,acos,atan,asinh,acosh,atanh,sign"	1			
+simpleop	value	f32	1		0			
+toimg	mode	s		"gleanx8,fcn,wav2lip"	0			
+toimg	bgr	i32	0		0			
+debug	load_file	s			1			
+debug	shape	vi32			1			
+debug	dtype	s		"i32,f32,u8,i8"	1			
+threshold	mode	s			0			
+threshold	thresh	f32			1			
+threshold	maxval	f32			0			
+lstm	layer_counts	i32			1			
+lstm	hiddens	i32			1			
+lstm	direction	s		"unidirection,bidirection"	1			
+bnms	mode	s		yolov8	1			
+bnms	region_count	i32	600		0			
+bnms	nms_count	i32	50		0			
+bnms	iou_thres	f32	0.45		0			
+bnms	conf_thres	f32	0.25		0			
+yolo	mode	s		"yolov5,yolox"	1			
+yolo	class_count	i32			1			
+yolo	stride	i32			1			
+yolo	anchor	vi32			0			
+yolo	conf_thres	f32	0.25		0			
+yolo	height	i32			0	yolox		
+yolo	width	i32			0	yolox		
+chunk	mode	s			0			
+chunk	axis	i32			0			
+chunk	count	i32			0			
+nms	mode	s		"yolov5,yolox,yolov5c,trt"	1			
+nms	count_per_class	i32			0			
+nms	class_count	i32			0			
+nms	region_count	i32	-1		0			
+nms	nms_count	i32	50		0			
+nms	iou_thres	f32	0.45		0			
+nms	conf_thres	f32	0.25		0			
+nms	intra_iou_thres	f32	0		0			
+nms	inter_class_nms	i32	0		0			
+nms	nms_algo	s	paral	"seq,paral"	0			
+nms	output_format	s	rcf	"rcf,rip"	0			
+nms	bbox_type	s		"xyxy,xywh"	0			
+region	bbox_stride	i32			0	maskrcnn101		
+region	bbox_scale	vi32			0	maskrcnn101		
+region	bbox_ratio	vf32			0	maskrcnn101		ls
+region	anchor_generator	i32	0		1	maskrcnn101		
+region	img_size	vi32	"0,0"		0	maskrcnn101		
+region	mode	s		maskrcnn	1	maskrcnn101		
+roialign	align_size	i32	0		1			
+roialign	mode	s		maskrcnn	1	maskrcnn101		
+roialign	roi_idx	i32	0		0	maskrcnn		
+gather	mode	s		"wav2lip-face-detect,yolov5c,swin-transformer,fastspeech"	1			
+gather	axis	i32			0			
+argmax	value	i32	0		0	"maxvalue ???? ????, ?????? 2??"		
+argmax	axis	i32			1			
+postproc	mode	s		"yolov5,yolov5c,yolox,bot-sort"	1			
+postproc	arg_vi32	vi32			0			
+postproc	arg_vf32	vf32			0			
+postproc	arg_vs	vs			0			
+matmul	trans_a	i32	0		0			
+matmul	trans_b	i32	0		0			
+deconv2d	channel	i32			1			
+deconv2d	kernel	vi32			1			
+deconv2d	stride	vi32	1		0			
+deconv2d	pad	vi32	0		0			
+deconv2d	pad_tf	s		"same,valid,pad,alexeyab"	0			
+deconv2d	group	i32	1		0			
+deconv2d	dilation	vi32	1		0			
+deconv2d	output_pad	vi32			0			
+deconv2d	weight_order	s	wa		0			
+deconv2d	bn_eps	f32	1.00E-05		0			
+deconv2d	weight	vs			0			
+deconv2d	refweight	vs			0			
+upsample	factor	i32			1			
+shuffle	mode	s		yolox	1			
+reduce	mode	s		"sum,add,prod,mul,max,min,avg,mean"	1			
+reduce	axis	vi32			1	????		
+reduce	keepdim	i32	1		0			
+resize	mode	s	bilinear	bilinear	0			
+resize	factor	i32			0			
+resize	size	vi32			0			
+resize	corner_align	i32	0		0			
+deconv1d	channel	i32			1			
+deconv1d	kernel	i32			1			
+deconv1d	stride	i32	1		0			
+deconv1d	pad	vi32	0		0			
+deconv1d	pad_tf	s		"same,valid,pad,alexeyab"	0			
+deconv1d	group	i32	1		0			
+deconv1d	dilation	i32	1		0			
+deconv1d	output_pad	i32			0			
+deconv1d	weight_order	s	wa		0			
+deconv1d	bn_eps	f32	1.00E-05		0			
+deconv1d	weight	vs			0			
+deconv1d	refweight	vs			0			
+sortk	axis	i32			1			
+sortk	k	i32			1			
+sortk	mode	s			0			
+topk	mode	s		"maskrcnn,xmem"	1	maskrcnn101		
+topk	topk_count	i32			1			
+topk	max_size	i32			0			
+topk	level_id	i32	0		0			
+mask	mode	s		maskrcnn	1	maskrcnn101		
+mask	arg_vi32	vi32			0	maskrcnn101		
+jacob	mode	s	norm	norm	0			
+jacob	arg_vi32	vi32			0	"instance norm???? channel axis?? ????, ???????? map?? ??????, gamma,beta?? ?????? ???????????? mean, std?? ?????????? ???????? ????"		
+jacob	arg_vf32	vf32			0	eps		
+m2m	mode	s			0			
+m2m	topk_count	i32			0			
+m2m	num_beams	i32			0			
+dist2bbox	mode	s		yolov8	0			
+dist2bbox	bbox_type	s		"xyxy,xywh"	1			
+nms_gather	mode	s		maskrcnn	1			
+nms_gather	class_count	i32			0	maskrcnn		
+nms_gather	nms_idx	i32			0	maskrcnn(nms 1차 2차 구분을 위한 param)		
+matrix	mode	s		"zero,eye,m2m"	1			
+matrix	img_size	vi32			1			
+matrix	bos_token_id	i32			0	m2m		

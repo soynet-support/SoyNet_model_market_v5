@@ -1,0 +1,6 @@
+#folder
+.vs/
+
+#file
+*.zip
+*.opendb
