@@ -40,7 +40,7 @@ CUDA version that GPU driver supports.
 # Start SoyNet Demo Examples
 
 ### installation
-* Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/bin_v5.1.0)
+* Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/SoyNet_v5.1.0)
 
 #### c++
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
