@@ -78,7 +78,7 @@
 ## Prerequisites
 #### NVIDA Development Environment
 CUDA version that GPU driver supports.
- - CUDA (>= 12.0)
+ - CUDA (>= 12.0) (DON'T NEED INSTALL CUDA. Cuda version that gpu driver supported.)
  
     ※ You need to use .dll and .so files that match CUDA and TensorRT versions. If you want another version, Please contact [SoyNet](https://soynet.io/).
     
