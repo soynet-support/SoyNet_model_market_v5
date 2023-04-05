@@ -57,7 +57,7 @@ CUDA version that GPU driver supports.
   ```
 3.  Make sure main.cpp in https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples is set to run the model you want to run:
 ```c++
-'Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
+//Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
 int yolov5();	
 int yolov8();
 
