@@ -62,7 +62,7 @@ int yolov5();
 int yolov8();
 
 int main() {
-	'Choose the one you want to run
+	//Choose the one you want to run
 	yolov5();
 	//yolov8();
 }
