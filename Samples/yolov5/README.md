@@ -40,7 +40,7 @@ CUDA version that GPU driver supports.
 # Start SoyNet Demo Examples
 
 ### installation
-* Please download dll file and include them in bin floder on soynet file. Check [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/bin_v5.1.0)
+* Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/bin_v5.1.0)
 
 #### c++
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
@@ -48,6 +48,10 @@ CUDA version that GPU driver supports.
   - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
   - Run ww.py on cmd as the following:
   - Example for ww.py:
+ 	- set environment to running ww.py 
+	```python
+	pip install -r requirements.txt  # install 
+	```
 	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
 	- Output_file_path: "../../../mgmt/weights/" + file_name
 		- File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
