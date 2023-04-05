@@ -45,27 +45,35 @@ CUDA version that GPU driver supports.
 * Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases/tag/SoyNet_v5.1.0)
 
 #### C++
+##### Prerequisites
+- Visual Studio 2022 [Download installer](https://visualstudio.microsoft.com/vs/)
+>- After the installer is installed, Find workload to choose workloads.
+>- Choose the "Desktop delvelopment with C++" workload and install.
+>- For more information of installation Visual Studio 2022 check [Insatll C and C++ suport in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170)
+
+#### Setup
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
-  - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
-  - Run ww.py on cmd as the following:
- 	```python
-  	python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
-  	```
-  	- set environment to running ww.py 
-	```python
-	pip install -r requirements.txt  # install 
-	```
-	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
-	- Output_file_path: "../../../mgmt/weights/" + file_name
-		- File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
-	- Help is available by typing:
-	```python ww.py -h```
-  - Example for ww.py:
-  	```
-  	python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
-  	```
-3.  Make sure main.cpp in https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples is set to run the model you want to run:
+  > - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
+  >	- set environment to running ww.py 
+  >	```python
+  >	pip install -r requirements.txt  # install 
+  >	```
+  > - Run ww.py on cmd as the following:
+  >>	```python
+  >>	python ww.py --model [model_name] --load_path [prepared weight file including path] --weight_path [output file path]
+  >>	```
+  >	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
+  >	- Output_file_path: "../../../mgmt/weights/" + file_name
+  >     - File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
+  >	- Help is available by typing:
+  >	```python ww.py -h```
+  >   - Example for ww.py:
+  > 	```
+  > 	python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
+  > 	```
+3. Open SoyNetV5.sln from [SoyNetV5 floder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
+4.  Make sure main.cpp in https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples is set to run the model you want to run:
 ```c++
 //Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
 int yolov5();	
@@ -77,9 +85,7 @@ int main() {
 	//yolov8();
 }
 ```
-4. Run
-
-Contact [SOYNET](https://soynet.io/#/contact-us).
+4. Run in Visual Studio
 
 # Reference
  - [Original Code](https://github.com/ultralytics/yolov5)
