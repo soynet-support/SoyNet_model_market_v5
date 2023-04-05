@@ -282,22 +282,6 @@ static void yolo5_video(vector<string>& params, string source_type, char model_n
 		long long start_usec = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
 		feedData(handle, 0, input.data());
 		inference(handle);
-		//if (0) {
-		//	int output_count = getOutputCount(handle);
-		//	for (int output_idx = 0; output_idx < output_count; output_idx++) {
-		//		int elt_count = getOutputEltSize(handle, output_idx);
-		//		int output_shape[10]; // ³Ë³ËÇÏ°Ô
-		//		int dim_len;
-		//		getOutputShape(handle, output_idx, output_shape, &dim_len);
-		//		vector<float> buffer(elt_count);
-		//		getOutput(handle, output_idx, buffer.data());
-		//		{
-		//			std::ofstream ofs("../TEMP/R", std::ios::binary);
-		//			ofs.write((char*)buffer.data(), buffer.size() * sizeof(float));
-		//		}
-		//		int jj = 0;
-		//	}
-		//}
 		getOutput(handle, 0, output.data());
 		long long end_usec = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
 		uint64_t dur = end_usec - start_usec;
@@ -391,9 +375,8 @@ int yolov5()
 	if (1) {
 		
 		string source_input = "../data/zidane.jpg"; //
-		//string source_input = "../data/15.jpg";
 		//string source_input = "../data/bus.jpg";
-		//string source_input = "../data/times-square-new-york-wallpaper.jpg";
+
 
 		vector<string> params = { source_input
 			//, source_input
@@ -413,11 +396,11 @@ int yolov5()
 	else {
 		string source_type = "video";
 
-		vector<string> params = { //"../data/Avengers Endgame.mp4"//NEW YORK CITYl.mp4//Avengers Endgame.mp4//NY.mkv
-			"../data/NY.mkv",// "../data/NY.mkv", "../data/NY.mkv", "../data/NY.mkv", 
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
+		vector<string> params = { 
+			"../data/video.mkv",// "../data/video.mkv", "../data/video.mkv", "../data/video.mkv", 
+			//"../data/video.mkv", "../data/video.mkv","../data/video.mkv", "../data/video.mkv",
+			//"../data/video.mkv", "../data/video.mkv","../data/video.mkv", "../data/video.mkv",
+			//"../data/video.mkv", "../data/video.mkv","../data/video.mkv", "../data/video.mkv",
 		};
 
 		int new_height = 640, new_width = 640;

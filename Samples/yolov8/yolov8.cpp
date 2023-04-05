@@ -21,159 +21,6 @@ static vector<uchar> colors = {
 	0,252,255,0,118,255,0,70,255,0,67,255,0,10,255,0,6,255,0,0,255,0,204,255,0,185,255,0,143,255,0,134,255,0,214,255,0,45,255,0,131,255,0,220,255,0,207,255,0,112,255,0,77,255,0,194,255,0,175,255,0,38,255,0,64,255,0,3,255,0,48,255,0,54,255,0,163,255,0,41,255,0,153,255,0,172,255,0,102,255,0,239,255,0,223,255,0,51,255,0,99,255,0,182,255,0,61,255,0,89,255,0,198,255,0,191,255,0,92,255,0,179,255,0,140,255,0,86,255,0,188,255,0,150,255,0,105,255,0,159,255,0,83,255,0,226,255,0,115,255,0,166,255,0,108,255,0,242,255,0,35,255,0,96,255,0,13,255,0,16,255,0,156,255,0,32,255,0,26,255,0,201,255,0,73,255,0,230,255,0,128,255,0,245,255,0,137,255,0,147,255,0,29,255,0,19,255,0,121,255,0,236,255,0,249,255,0,169,255,0,233,255,0,124,255,0,217,255,0,22,255,0,57,255,0,210,255,0,80,255,
 };
 
-void yolov8_video(vector<string>& params, string source_type, char model_name[])
-{
-
-	//int batch_size = params.size();
-	//vector<cv::VideoCapture> vcap;
-	//for (int vidx = 0; vidx < batch_size; vidx++) {
-	//	if (source_type == "video") {
-	//		vcap.emplace_back(VideoCapture(params[vidx]));
-	//		if (!vcap[vidx].isOpened()) {
-	//			printf("Error, Can't open video [%s]\n", params[vidx].c_str());
-	//			exit(-1);
-	//		}
-	//	}
-	//	else if (source_type == "cam") {
-	//		vcap.emplace_back(VideoCapture(vidx));
-	//		if (!vcap[vidx].isOpened()) {
-	//			printf("Error, Can't open cam id [%d]", vidx);
-	//			exit(-1);
-	//		}
-	//	}
-	//	else {
-	//		printf("Error, Not supported source_type [%s], should be [video or cam]\n", source_type.c_str());
-	//		exit(-1);
-	//	}
-	//}
-	//int input_width = vcap[0].get(3);
-	//int input_height = vcap[0].get(4);
-
-	//int region_count = 1000;
-	//int nms_count = 50; // 화면에 표시할 최대 객체의 수 <= 모델에서 정의한 최종 객체의 수
-
-	//int make_engine = 1;
-	//int class_count = coco_label.size();
-	//float conf_thres = 0.25f;
-	//char cfg_file[256];	sprintf(cfg_file, "../mgmt/configs/%s.cfg", model_name);
-	//char engine_file[256];	sprintf(engine_file, "../mgmt/configs/%sr01.bin", model_name);
-	//char weight_file[256];	sprintf(weight_file, "../mgmt/weights/yolov8m-seg.weights", model_name);
-	//char log_dir[] = "../mgmt/logs";
-	//char extend_param[2000];
-	//char img_size[] = "640,640";
-	//int stride = 64;
-
-	//vector<uchar> colors(class_count * 3); // 마스크로 사용할 색상 table 저장소
-	//makeColors(class_count, colors.data(), "bgr"); // mask로 사용할 색상 Table을 미리 만들어 놓는다.
-	//int thickness = 2, lineType = 8, shift = 0;
-
-	//sprintf(extend_param,
-	//	"BATCH_SIZE=%d MAKE_ENGINE=%d ENGINE_FILE=%s STRIDE=%d CLASS_COUNT=%d CONF_THRES=%f NMS_COUNT=%d REGION_COUNT=%d WEIGHT_FILE=%s INPUT_SIZE=%d,%d IMG_SIZE=%s",
-	//	batch_size, make_engine, engine_file, stride, class_count, conf_thres, nms_count, region_count, weight_file, input_height, input_width, img_size);
-	//void* handle = initSoyNet(cfg_file, extend_param);
-
-	//uint64_t dur_microsec = 0;
-	//uint64_t count = 0;
-
-	//int is_break = 0;
-	//int is_bbox = 1;
-	//int is_text = 1;
-	//int is_fps = 1;
-	//int is_objInfo = 0;
-
-	////Mat resizeMat;
-	//vector<Mat> img(batch_size);// (input_height, input_width, CV_8UC3);
-
-	//int map_size = input_height * input_width * 3;
-
-	//while (1) {
-	//	vector<char> input(batch_size * map_size);
-	//	int loop = 1;
-	//	for (int vidx = 0; vidx < batch_size; vidx++) {
-	//		vcap[vidx] >> img[vidx];
-	//		if (img[vidx].empty()) {
-	//			loop = 0;
-	//			break;
-	//		}
-	//		memcpy(&input[vidx * map_size], img[vidx].data, map_size);
-	//	}
-	//	if (loop == 0) {
-	//		break;
-	//	}
-	//	//resize(resizeMat, img, img.size(), 0, 0, INTER_LINEAR);
-
-	//	vector<BBox> output(batch_size * nms_count);
-
-	//	uint64_t start_microsec = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-	//	feedData(handle, 0, input.data());
-	//	inference(handle);
-	//	getOutput(handle, 0, output.data());
-	//	uint64_t end_microsec = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
-
-	//	uint64_t dur = end_microsec - start_microsec;
-	//	dur_microsec += dur;
-
-	//	for (int vidx = 0; vidx < batch_size; vidx++) {
-	//		BBox* bbox = &output[vidx * nms_count];
-	//		for (int ridx = 0; ridx < nms_count && bbox[ridx].conf > 0.f; ridx++) {
-	//			if (is_bbox == 1) {//box
-	//				int ori_x1 = int(bbox[ridx].x1);
-	//				int ori_y1 = int(bbox[ridx].y1);
-	//				int ori_x2 = int(bbox[ridx].x2);
-	//				int ori_y2 = int(bbox[ridx].y2);
-	//				int class_id = int(bbox[ridx].obj_id);
-	//				if (is_objInfo == 1) {
-	//					printf("  %3d (%6d %6d %6d %6d) %2d obj=%15s prob=%.6f\n", ridx, ori_x1, ori_y1, ori_x2, ori_y2, class_id, coco_label[class_id].c_str(), bbox[ridx].conf);
-	//				}
-	//				int obj_index = bbox[ridx].obj_id;
-	//				Scalar color(colors[obj_index * 3], colors[obj_index * 3 + 1], colors[obj_index * 3 + 2]);
-	//				Rect rect(ori_x1, ori_y1, ori_x2 - ori_x1, ori_y2 - ori_y1);
-	//				rectangle(img[vidx], rect, color, 2, 8, 0);
-	//				if (is_text) {
-	//					Point org(ori_x1, ori_y1 - 3);
-	//					//string prob_s = to_string(roundf(bbox[ridx].prob * 100) / 100).erase(4, 8); // 소수점 3번째 자리에서 반올림 후 string으로 변환
-	//					string text = to_string(ridx) + " " + coco_label[class_id] + " " + to_string(bbox[ridx].conf);
-	//					putText(img[vidx], text, org, cv::FONT_HERSHEY_SIMPLEX, 0.5, color);
-	//				}
-	//			}
-	//			if (is_fps == 1) {// fps
-	//				Point org2(15, input_height - 20);
-	//				string text2 = "fps = " + to_string(1000000. / dur);
-	//				putText(img[vidx], text2, org2, cv::FONT_HERSHEY_SIMPLEX, 0.65, Scalar(255, 255, 255));
-	//			}
-	//		}
-	//		String name = model_name + to_string(vidx);
-	//		imshow(name, img[vidx]);
-	//	}
-	//	printf("%lld time=%.1f msec fps=%.2f\n", count, dur / 1000., 1000000. / dur);
-
-	//	int ret = waitKey(1);
-	//	if (ret == 27 || ret == 'q' || ret == 'Q') {
-	//		is_break = 1;
-	//	}
-	//	else if (ret == ' ') {
-	//		waitKey(0);
-	//	}
-	//	else if (ret == 'b' || ret == 'B') {
-	//		is_bbox ^= 1;
-	//	}
-	//	else if (ret == 't' || ret == 'T') {
-	//		is_text ^= 1;
-	//	}
-	//	else if (ret == 'f' || ret == 'F') {
-	//		is_fps ^= 1;
-	//	}
-	//	else if (ret == 'i' || ret == 'I') {
-	//		is_objInfo ^= 1;
-	//	}
-	//	if (is_break == 1) break;
-	//	count++;
-	//}
-	//printf("count=%lld total_time=%.1f msec avg_time=%.1f msec fps=%.2f\n",
-	//	count, dur_microsec / 1000., dur_microsec / 1000. / count, count * 1000000. / dur_microsec);
-
-	//freeSoyNet(handle);
-}
 
 
 void yolov8_img(int org_height, int org_width, vector<string>& params, char model_name[])
@@ -227,28 +74,6 @@ void yolov8_img(int org_height, int org_width, vector<string>& params, char mode
 		}
 		feedData(handle, 0, input.data());
 		inference(handle);
-		//if (1) {
-		//	int output_count = getOutputCount(handle);
-		//	for (int output_idx = 0; output_idx < output_count; output_idx++) {
-		//		int elt_count = getOutputEltSize(handle, output_idx);
-		//		int output_shape[10] = { 0 }; // 넉넉하게
-		//		int dim_len;
-		//		getOutputShape(handle, output_idx, output_shape, &dim_len);
-
-		//		vector<int> ibuffer(elt_count);
-		//		getOutput(handle, output_idx, ibuffer.data());
-
-		//		vector<float> buffer(elt_count);
-		//		getOutput(handle, output_idx, buffer.data());
-
-		//		{
-		//			std::ofstream ofs("../TEMP/R", std::ios::binary);
-		//			ofs.write((char*)buffer.data(), buffer.size() * sizeof(float));
-
-		//		}
-		//		int jj = 0; 
-		//	}
-		//}
 		vector<YOLO_RESULT> output(result_count);
 		getOutput(handle, 0, output.data());
 		long long end_usec = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
@@ -317,19 +142,6 @@ int yolov8()
 		vector<string> params = { source_input, };
 
 		yolov8_img(input_height, input_width, params, model_name);
-	}
-	else {
-
-		string source_type = "video"; //cam or video
-
-		vector<string> params = { "../data/NY.mkv"
-			//,"../data/NY.mkv", "../data/NY.mkv", "../data/NY.mkv", "../data/NY.mkv", 
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
-			//"../data/NY.mkv", "../data/NY.mkv","../data/NY.mkv", "../data/NY.mkv",
-		};
-
-		yolov8_video(params, source_type, model_name);
 	}
 
 	return 0;
