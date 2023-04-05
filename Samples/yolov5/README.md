@@ -55,7 +55,7 @@ CUDA version that GPU driver supports.
 #### Setup
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
-  > - Open weights(https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights) folder.
+  > - Open [weights folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights).
   >	- set environment to running ww.py 
   >	```python
   >	pip install -r requirements.txt  # install 
@@ -66,7 +66,7 @@ CUDA version that GPU driver supports.
   >>	```
   >	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
   >	- Output_file_path: "../../../mgmt/weights/" + file_name
-  >     - File name is set in https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp
+  >     - File name is set in [yolov5.cpp](https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp)
   >	- Help is available by typing:
   >	```python ww.py -h```
   >   - Example for ww.py:
