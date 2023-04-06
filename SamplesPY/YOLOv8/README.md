@@ -52,7 +52,7 @@ Make python environment. python version is not that matter.
 pip install opencv-python
 ```
 
-#### Convert weight file to Soynet weight file
+#### Convert weight file to SoyNet weight file
 * Skip this setup, if you have Soynet weight file or [SoyNet_model_markey_v5](https://github.com/soynet-support/SoyNet_model_market_v5) already have YOLOv8m soynet weights.
 1.  Prepare standard weight file on [ultralytics](https://github.com/ultralytics/ultralytics#models) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
