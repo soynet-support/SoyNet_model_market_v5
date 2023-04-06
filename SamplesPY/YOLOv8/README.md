@@ -17,8 +17,8 @@ CUDA version that GPU driver supports.
 
 
 # Parameters
+  ※ All parameters are already set in the sample code.
  - `soynet_home` : path of soynet root path
-※ All parameters are already set in the sample code.
  - `extend_param`
       -  `make_engine` : Whether or not the engine is created. (default : 0)
          - 0: Load existing engine file.
