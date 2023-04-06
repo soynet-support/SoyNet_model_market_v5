@@ -60,13 +60,13 @@ def attempt_load(weights, map_location=None):
 def main():
     parser = ArgumentParser()
     parser.add_argument("--model", required=True, help="yolov5l6, yolov5m6, yolov5s6, yolov5n6", type=str, default='yolov5l6')
-    parser.add_argument("--load_path", required=True, help="path of orignal weight", type=str, default='./yolov5l6.pt')
-    parser.add_argument("--weight_path", required=True, help="path of saving Soynet weight file", type=str, default='../../../mgmt/weights/yolo.weights')
+    # parser.add_argument("--load_path", required=True, help="path of orignal weight", type=str, default='./yolov5l6.pt')
+    # parser.add_argument("--weight_path", required=True, help="path of saving Soynet weight file", type=str, default='../../../mgmt/weights/yolo.weights')
     args = parser.parse_args()
 
     model_name = args.model
-    pytorch_weight_path = args.load_path
-    soynet_weight_path = args.weight_path
+    pytorch_weight_path = "%s.pt"%(model_name)
+    soynet_weight_path = "../../../mgmt/weights/%s.weights"%(model_name)
     sys.path.insert(0, "./yolov5r61")
     
     with open(soynet_weight_path, 'wb') as f:
