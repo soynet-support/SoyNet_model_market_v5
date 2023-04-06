@@ -52,7 +52,8 @@ CUDA version that GPU driver supports.
 >- Choose the "Desktop delvelopment with C++" workload and install.
 >- For more information of installation Visual Studio 2022 check [Insatll C and C++ support in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-170)
 
-#### Setup
+#### Convert weight file to SoyNet weight file
+- Skip this setup, if you have Soynet weight file
 1.  Prepare standard weight file on [ultralytics release](https://github.com/ultralytics/yolov5/releases/tag/v7.0) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
   > - Open [weights folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples/yolov5/weights).
@@ -74,8 +75,9 @@ CUDA version that GPU driver supports.
   > 		```
   > 		python ww.py --model yolov5m6
   > 		```
-3. Open SoyNetV5.sln from [SoyNetV5 folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
-4. Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
+#### How to run
+1. Open SoyNetV5.sln from [SoyNetV5 folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
+2. Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
 ```C++
 //Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
 int yolov5();	
@@ -87,7 +89,7 @@ int main() {
 	//yolov8();
 }
 ```
-5. Run in Visual Studio
+3. Run in Visual Studio
 
 # Reference
  - [Original Code](https://github.com/ultralytics/yolov5)
