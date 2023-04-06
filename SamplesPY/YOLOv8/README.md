@@ -49,6 +49,7 @@ CUDA version that GPU driver supports.
 ##### Install
 Make python environment. python version is not that matter.
 ```python
+pip install numpy
 pip install opencv-python
 ```
 
