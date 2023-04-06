@@ -43,18 +43,20 @@ CUDA version that GPU driver supports.
 # Start SoyNet Demo Examples
 
 ### Installation
-* Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases)
+* Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases).
+* Do not forget downloading dll files and putting them in bin folder.
 
-#### python
+### python
 ##### Install
-Make python environment. python version is not that matter.
+Make python environment. Python version does not matter.
 ```python
 pip install numpy
 pip install opencv-python
 ```
 
 #### Convert weight file to SoyNet weight file
-* Skip this setup, if you have Soynet weight file or [SoyNet_model_markey_v5](https://github.com/soynet-support/SoyNet_model_market_v5) already have YOLOv8m soynet weights.
+* You can skip this step, if you already have SoyNet weight file 
+<br/>([SoyNet_model_markey_v5](https://github.com/soynet-support/SoyNet_model_market_v5) already has YOLOv8s weights for SoyNet [here](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/mgmt/weights)).
 1.  Prepare standard weight file on [ultralytics](https://github.com/ultralytics/ultralytics#models) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
   > - Open [weights folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SamplesPY/YOLOv8/Weights).
