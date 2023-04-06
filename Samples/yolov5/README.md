@@ -64,7 +64,7 @@ CUDA version that GPU driver supports.
   >>	```python
   >>	python ww.py --model [model_name]
   >>	```
-  >	※ weight file that covert for soynet has to be in weights folder and same as model name (ex. yolov5l6.pt).
+  >	※ weight file that covert for soynet has to be in weights folder and same name as model name (ex. yolov5l6.pt).
   >	- Supported model_name: yolov5l6, yolov5m6, yolov5s6, and yolov5n6
   >	- Output_file_path: "../../../mgmt/weights/%s.weights" %(file_name)
   >     - File name is set in [yolov5.cpp](https://github.com/soynet-support/SoyNet_model_market_v5/blob/main/Samples/yolov5/yolov5.cpp)
