@@ -72,7 +72,7 @@ CUDA version that GPU driver supports.
   >		```python ww.py -h```
   >   - Example for ww.py:
   > 		```
-  > 		python ww.py --model yolov5m6 --load_path ./yolov5m.pt --weight_path ../../../mgmt/weights/yolov5m6r62.weights
+  > 		python ww.py --model yolov5m6
   > 		```
 3. Open SoyNetV5.sln from [SoyNetV5 folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
 4. Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
