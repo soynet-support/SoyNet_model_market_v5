@@ -70,7 +70,7 @@
       - `extend_param` contains parameters necessary to define the model, such as input size, engine_serialize, batch_size ...
       - The parameters required may vary depending on the model.
 
-   ※ `engine_serialize` in `extend_param`
+   ※ `make_engine` in `extend_param`
       - This parameter determines whether to build a SoyNet engine or not.
       - default is 0.
       - If you run SoyNet for the first time or modify config or extended parameters, select one of the following two methods.
