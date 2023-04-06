@@ -37,12 +37,15 @@
    |  |  |  └─ww.py     : you can make soynet weight file from your own weight file
    |  |  └─model.cpp    : execution file
    |  └─main.cpp        : main on c++
-   ├─SamplesPy          : sample code on python 
+   ├─SamplesPy          :  sample code of AI model on python (such as yolov5...)
+   |  ├─model
+   |  |  ├─weights      
+   |  |  |  └─ww.py     : you can make soynet weight file from your own weight file
+   |  |  └─model.py    : execution file
    ├─bin                : *.dll file for running soynetV5
    ├─data               : sample data(such as jpg, mp4..) for sample code
    ├─include            : header file for soynetV5
    ├─lib                : lib for release
-   ├─lib_debug          : lib for debug
    ├─mgmt               : SoyNet executuion env
    │  ├─configs         : Model definitions (*.cfg)
    │  ├─engines         : SoyNet engine files
