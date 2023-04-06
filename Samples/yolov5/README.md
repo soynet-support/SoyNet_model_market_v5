@@ -21,7 +21,7 @@ CUDA version that GPU driver supports.
  - `extend_param`
       - `soynet_home` : path of soynet root path
       - `batch_size` : This is the batch-size of the data you want to input.
-      - `engine_serialize` : Whether or not the engine is created. (default : 0)
+      - `make_engine` : Whether or not the engine is created. (default : 0)
          - 0: Load existing engine file.
          - 1: Create engine file from weight file. you need to set value to in following cases.
             - Change extended param.
