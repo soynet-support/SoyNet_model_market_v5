@@ -33,9 +33,16 @@ void yolov8_img(int org_height, int org_width, vector<string>& params, char mode
 	int result_count = batch_size * count_per_class * class_count; // 모든 batch를 통털어 전체 출력 갯수
 	float conf_thres = 0.25f;
 	float iou_thres = 0.7f;
-	char cfg_file[256];	sprintf(cfg_file, "../mgmt/configs/%s.cfg", model_name);
-	char engine_file[256];	sprintf(engine_file, "../mgmt/engines/%s.bin", model_name);
-	char weight_file[256];	sprintf(weight_file, "../mgmt/weights/%s.weights", model_name);
+	char cfg_file[256];	sprintf(cfg_file, "%s/mgmt/configs/%s.cfg", soynet_home, model_name);
+	char engine_file[256];	sprintf(engine_file, "%s/mgmt/engines/%s.bin", soynet_home, model_name);
+	char weight_file[256];	sprintf(weight_file, "%s/mgmt/weights/%s.weights", soynet_home, model_name);
+	const char* plugin_dir;
+#ifdef _WIN32
+	plugin_dir = "plugins_windows";
+#endif
+#ifdef linux
+	plugin_dir = "plugins_ubuntu_20.04"
+#endif
 	char log_dir[] = "../mgmt/logs";
 	char extend_param[2000];
 	//char img_size[] = "640,640";
@@ -52,8 +59,8 @@ void yolov8_img(int org_height, int org_width, vector<string>& params, char mode
 	//}
 	
 	sprintf(extend_param,
-		"BATCH_SIZE=%d SOYNET_HOME=%s MODEL_NAME=%s MAKE_ENGINE=%d ENGINE_FILE=%s CLASS_COUNT=%d CONF_THRES=%f IOU_THRES=%f REGION_COUNT=%d COUNT_PER_CLASS=%d RESULT_COUNT=%d WEIGHT_FILE=%s RE_SIZE=%d,%d ORG_SIZE=%d,%d TOP=%d BOTTOM=%d LEFT=%d RIGHT=%d",
-		batch_size, soynet_home, model_name, make_engine, engine_file, class_count, conf_thres, iou_thres, region_count, count_per_class, result_count, weight_file, s.unpad_height, s.unpad_width, org_height, org_width, s.pad_top, s.pad_bottom, s.pad_left, s.pad_right);
+		"BATCH_SIZE=%d SOYNET_HOME=%s MODEL_NAME=%s MAKE_ENGINE=%d ENGINE_FILE=%s PLUGIN_DIR=%s CLASS_COUNT=%d CONF_THRES=%f IOU_THRES=%f REGION_COUNT=%d COUNT_PER_CLASS=%d RESULT_COUNT=%d WEIGHT_FILE=%s RE_SIZE=%d,%d ORG_SIZE=%d,%d TOP=%d BOTTOM=%d LEFT=%d RIGHT=%d",
+		batch_size, soynet_home, model_name, make_engine, engine_file, plugin_dir, class_count, conf_thres, iou_thres, region_count, count_per_class, result_count, weight_file, s.unpad_height, s.unpad_width, org_height, org_width, s.pad_top, s.pad_bottom, s.pad_left, s.pad_right);
 
 	void* handle = initSoyNet(cfg_file, extend_param);
 	int re_map_size = s.unpad_height * s.unpad_width * 3;

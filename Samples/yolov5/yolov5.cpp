@@ -37,10 +37,11 @@ static void yolov5_img(int org_height, int org_width, vector<string>& params, ch
 
 	const char* plugin_dir;
 
-#ifdef NDEBUG
-	plugin_dir = "../lib/plugins/";
-#else
-	plugin_dir = "../lib_debug/plugins/";
+#ifdef _WIN32
+	plugin_dir = "plugins_windows";
+#endif
+#ifdef linux
+	plugin_dir = "plugins_ubuntu_20.04"
 #endif
 
 	int make_engine = 1;
