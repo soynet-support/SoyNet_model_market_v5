@@ -14,8 +14,21 @@ SoyNet YOLOv5 support YOLOv5l6, YOLOv5m6, YOLOv5s6, and YOLOv5n6.
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
     ※ If you want another specific version, Please contact [SoyNet](https://soynet.io/en/).
+<details open>
+<summary>How To Check Nvidia GPU Driver</summary>
+
+Use command line and consult nvidia-smi utility to reveal NVIDIA driver version:
+```cmd
+nvidia-smi
+```
++-----------------------------------------------------------------------------+
+<br/>| NVIDIA-SMI 525.78.01    Driver Version: 525.78.01    CUDA Version: 12.0        |
+<br/>|-------------------------------+----------------------+----------------------+
 
 
+</details>
+
+<br/>※ If you want another version, Please contact [SoyNet](https://soynet.io/en/).
 
 # Parameters
 ※ All parameters are already set in the sample code.
@@ -43,7 +56,8 @@ CUDA version that GPU driver supports.
 # Start SoyNet Demo Examples
 
 ### Installation
-* Please download dll/so file and include them in bin/lib floder(depends on OS) on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases)
+* Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases).
+* Do not forget downloading dll/so files and putting them in bin/lib folder(depends on OS).
 
 #### C++
 ##### Prerequisites
