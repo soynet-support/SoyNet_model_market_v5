@@ -91,7 +91,7 @@ CUDA version that GPU driver supports.
     ※ Please contact us for specific GPU support.
     
 #### S/W
- - OS : Windows 10 / 11
+ - OS : Ubuntu 20.04 LTS, Windows 10 / 11
 
 
 
