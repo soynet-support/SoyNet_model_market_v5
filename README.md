@@ -103,9 +103,12 @@ nvidia-smi
 ※ If you want another version, Please contact [SoyNet](https://soynet.io/).
     
 #### H/W
- - Tested GPU architecture : Pascal/Volta/Turing/Ampere/Ada Lovelac (ex: for PC Nvidia GTX 10xx, RTX 20xx/30xx/40xx, etc)
+ - Tested GPU architecture : 
+   - Pascal/Volta/Turing/Ampere/Ada Lovelac (ex: for PC Nvidia GTX 10xx, RTX 20xx/30xx/40xx, etc)
+   - Nvidia 384-Core Volta GPU (in Nvidia NX Xavier)
  
-    ※ Please contact us for specific GPU support.
+ 
+※ Please contact [SoyNet](https://soynet.io/) for specific GPU support.
     
 
 
