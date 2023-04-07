@@ -8,7 +8,7 @@ SoyNet YOLOv5 support YOLOv5l6, YOLOv5m6, YOLOv5s6, and YOLOv5n6.
 
 # Environments
 #### S/W
- - OS : windows 10 64 bit, windows 11
+ - OS : Ubuntu 20.04 LTS, Windows 10 64 bit, Windows 11
 
 #### NVIDIA Development Environment
 CUDA version that GPU driver supports.
