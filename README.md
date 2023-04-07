@@ -79,19 +79,35 @@
          
          
 ## Prerequisites
+
+#### S/W
+ - OS : Ubuntu 20.04 LTS, Windows 10 / 11
+
 #### NVIDA Development Environment
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
- 
-    ※ You need to use .dll and .so files that match CUDA and TensorRT versions. If you want another version, Please contact [SoyNet](https://soynet.io/).
+ <details open>
+<summary>How To Check Nvidia GPU Driver</summary>
+
+Use command line and consult nvidia-smi utility to reveal NVIDIA driver version:
+```cmd
+nvidia-smi
+```
++-----------------------------------------------------------------------------+
+<br/>| NVIDIA-SMI 525.78.01    Driver Version: 525.78.01    CUDA Version: 12.0        |
+<br/>|-------------------------------+----------------------+----------------------+
+
+
+</details>
+
+※ If you want another version, Please contact [SoyNet](https://soynet.io/).
     
 #### H/W
  - Tested GPU architecture : Pascal/Volta/Turing/Ampere/Ada Lovelac (ex: for PC Nvidia GTX 10xx, RTX 20xx/30xx/40xx, etc)
  
     ※ Please contact us for specific GPU support.
     
-#### S/W
- - OS : Ubuntu 20.04 LTS, Windows 10 / 11
+
 
 
 
