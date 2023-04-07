@@ -10,15 +10,29 @@ SoyNet YOLOv8 support YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s.
 #### NVIDIA Development Environment
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
+<details open>
+<summary>How To Check Nvidia GPU Driver</summary>
+
+Use command line and consult nvidia-smi utility to reveal NVIDIA driver version:
+```cmd
+nvidia-smi
+```
++-----------------------------------------------------------------------------+
+<br/>| NVIDIA-SMI 525.78.01    Driver Version: 525.78.01    CUDA Version: 12.0        |
+<br/>|-------------------------------+----------------------+----------------------+
+
+
+</details>
+
+ 
  <br/>※ If you want another version, Please contact [SoyNet](https://soynet.io/en/).
 #### S/W
- - OS : windows 10 64 bit, windows 11
-
+ - OS : Ubuntu 20.04 LTS, windows 10 64 bit, windows 11
 
 
 # Parameters
   ※ All parameters are already set in the sample code.
- - `soynet_home` : path of soynet root path
+ - `soynet_home` : path of SoyNet root path
  - `extend_param`
       -  `make_engine` : Whether or not the engine is created. (default : 0)
          - 0: Load existing engine file.
@@ -44,7 +58,7 @@ CUDA version that GPU driver supports.
 
 ### Installation
 * Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases).
-* Do not forget downloading dll files and putting them in bin folder.
+* Do not forget downloading dll/so files and putting them in bin/lib folder(depends on OS).
 
 ### python
 ##### Install
