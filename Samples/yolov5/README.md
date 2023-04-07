@@ -6,13 +6,14 @@ SoyNet YOLOv5 support YOLOv5l6, YOLOv5m6, YOLOv5s6, and YOLOv5n6.
 
 
 
-# Environments   
+# Environments
+#### S/W
+ - OS : windows 10 64 bit, windows 11
+
 #### NVIDIA Development Environment
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
-    ※ You need to use .dll and .so files that match CUDA and TensorRT versions. If you want another version, Please contact [SoyNet](https://soynet.io/en/).
-#### S/W
- - OS : windows 10 64 bit, windows 11
+    ※ If you want another specific version, Please contact [SoyNet](https://soynet.io/en/).
 
 
 
@@ -42,7 +43,7 @@ CUDA version that GPU driver supports.
 # Start SoyNet Demo Examples
 
 ### Installation
-* Please download dll file and include them in bin floder on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases)
+* Please download dll/so file and include them in bin/lib floder(depends on OS) on SoyNet file. Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases)
 
 #### C++
 ##### Prerequisites
