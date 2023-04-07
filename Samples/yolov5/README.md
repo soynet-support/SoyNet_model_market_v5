@@ -76,7 +76,7 @@ CUDA version that GPU driver supports.
   > 		python ww.py --model yolov5m6
   > 		```
 #### How to run
-1. Open SoyNetV5.sln from [SoyNetV5 folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SoyNetV5)
+1. Open Samples.vcxproj from [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples)
 2. Make sure main.cpp in [Samples folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples) is set to run the model you want to run:
 ```C++
 //Lists of functions under folder https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/Samples
