@@ -9,7 +9,7 @@ SoyNet YOLOv8 support YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s.
 # Environments   
 
 #### S/W
- - OS : Ubuntu 20.04 LTS, windows 10 64 bit, windows 11
+ - OS : Ubuntu 20.04 LTS
 
 #### NVIDIA Development Environment
 CUDA version that GPU driver supports.
