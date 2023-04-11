@@ -26,10 +26,7 @@ model_name = "yolov8s"
 cfg_file = soynet_home + "/mgmt/configs/%s.cfg"%model_name
 engine_file = soynet_home + "/mgmt/engines/%s.bin" % model_name
 weight_file = soynet_home + "/mgmt/weights/%s.weights" % model_name
-if platform.system() == "Linux":
-    plugin  = "plugins_ubuntu_20.04"
-elif platform.system() == "Windows":
-    plugin = "plugins_windows"
+plugin  = "plugins"
 
 class_count = len(coco_label)
 conf_thres=0.25
