@@ -30,13 +30,6 @@
 
 
 ```
-   ├─3party             : third party file to run sample code
-   ├─Samples            : sample code of AI model on c++ (such as yolov5...)
-   |  ├─model
-   |  |  ├─weights      
-   |  |  |  └─ww.py     : you can make soynet weight file from your own weight file
-   |  |  └─model.cpp    : execution file
-   |  └─main.cpp        : main on c++
    ├─SamplesPy          :  sample code of AI model on python (such as yolov5...)
    |  ├─model
    |  |  ├─weights      
@@ -44,7 +37,6 @@
    |  |  └─model.py    : execution file
    ├─bin                : *.dll file for running soynetV5
    ├─data               : sample data(such as jpg, mp4..) for sample code
-   ├─include            : header file for soynetV5
    ├─lib                : lib for release
    ├─mgmt               : SoyNet executuion env
    │  ├─configs         : Model definitions (*.cfg)
@@ -52,7 +44,6 @@
    │  ├─licenses        : license file
    │  ├─logs            : SoyNet log files
    │  └─weights         : Weight files for SoyNet models (*.weights)
-   ├─output             : output direction when build sample code on c++
    └─layer_dict_V5.1.0  : dictionary file for soynet layer
 ```
  - `engines` : it's made at the first time execution or when you modify the configs file.
@@ -81,8 +72,8 @@
 ## Prerequisites
 
 #### S/W
- - OS : Ubuntu 20.04 LTS, Windows 10 / 11
-
+ - OS : Ubuntu 20.04 LTS
+ 
 #### NVIDA Development Environment
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
