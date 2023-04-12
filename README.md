@@ -79,7 +79,7 @@
 
 
 CUDA version that GPU driver supports.
- - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
+ - CUDA Driver Version (>= 12.0) (Cuda version that gpu driver supported.)
 
  
  <details open>
