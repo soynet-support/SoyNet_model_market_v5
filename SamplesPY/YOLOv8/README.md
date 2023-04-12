@@ -67,11 +67,12 @@ nvidia-smi
 ### python
 ##### Install
 Make python environment. Python version does not matter.
-```python
-pip install numpy
-pip install opencv-python
-```
 
+#### Download pre-trained weights files (already converted for SoyNet)
+```python
+python download_soynet_weight.py
+```
+* default of download path is `../../../mgmt/weights` but if you want to set download path, you can command `python download_soynet_weight.py --path [path]`
 #### Convert weight file to SoyNet weight file
 * You can skip this step, if you already have SoyNet weight file 
 <br/>([SoyNet_model_markey_v5](https://github.com/soynet-support/SoyNet_model_market_v5) already has YOLOv8s weights for SoyNet [here](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/mgmt/weights)).
@@ -79,7 +80,7 @@ pip install opencv-python
 2.  Convert weight file in step 1 to SoyNet weight file
   > - Open [weights folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SamplesPY/YOLOv8/Weights).
   >	- set environment to running ww.py 
-  >	```python
+  >	```python 
   >	pip install -r requirements.txt  # install 
   >	```
   > - Run ww.py on cmd as the following:
