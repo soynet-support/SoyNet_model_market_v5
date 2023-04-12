@@ -35,7 +35,6 @@
    |  |  ├─weights      
    |  |  |  └─ww.py     : you can make soynet weight file from your own weight file
    |  |  └─model.py    : execution file
-   ├─bin                : *.dll file for running soynetV5
    ├─data               : sample data(such as jpg, mp4..) for sample code
    ├─lib                : lib for release
    ├─mgmt               : SoyNet executuion env
