@@ -72,7 +72,11 @@
 
 #### S/W
  - OS : Ubuntu 20.04 LTS
- 
+ - Others : `pip insatll -r requirements.txt`
+   - OpenCV (for reading video files and outputting the screen)
+   - Wget (for 'download_soynet_weight.py' in [weights folder](#folder-structure)
+   - Numpy
+   
 #### NVIDA Development Environment
  
  - TensorRT (= 8.6.0)
