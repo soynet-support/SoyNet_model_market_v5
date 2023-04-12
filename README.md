@@ -76,6 +76,10 @@
 #### NVIDA Development Environment
 CUDA version that GPU driver supports.
  - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
+ 
+ 
+ - TensorRT (= 8.6.0)
+ 
  <details open>
 <summary>How To Check Nvidia GPU Driver</summary>
 
