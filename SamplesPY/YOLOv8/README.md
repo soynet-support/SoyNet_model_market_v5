@@ -12,8 +12,11 @@ SoyNet YOLOv8 support YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s.
  - OS : Ubuntu 20.04 LTS
 
 #### NVIDIA Development Environment
+- TensorRT (= 8.6.0)
+
+
 CUDA version that GPU driver supports.
- - CUDA (>= 12.0) (Cuda version that gpu driver supported.)
+ - CUDA Driver Version (>= 12.0) (Cuda version that gpu driver supported.)
 <details open>
 <summary>How To Check Nvidia GPU Driver</summary>
 
