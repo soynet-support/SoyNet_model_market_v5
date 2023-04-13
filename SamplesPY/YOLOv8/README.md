@@ -13,6 +13,7 @@ SoyNet YOLOv8 support YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s.
 
 #### NVIDIA Development Environment
 - TensorRT (= 8.6.0)
+`pip install tensorrt`
  <details close>
 <summary>MORE INFO</summary>
 Actually, SoyNet needs only
