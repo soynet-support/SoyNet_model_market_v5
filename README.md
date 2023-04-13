@@ -80,13 +80,26 @@
 #### NVIDA Development Environment
  
  - TensorRT (= 8.6.0)
+ <details close>
+<summary>more info</summary>
+Actually, SoyNet needs only
 
+- libnvinfer.so
+- libnvinfer_builder_resource.so.8.6.0
 
-CUDA version that GPU driver supports.
+If you need an efficient way to run SoyNet, just include those files (from TensorRT SDK) in the lib folder.
+
+But due to Nvidia license policy, we cannot provide a portion of the TensorRT SDK.
+
+So technically, SoyNet doesn't need to install the TensorRT SDK.
+##### More about [SoyNet](https://soynet.io/).
+</details>
+
+#### CUDA version that GPU driver supports.
  - CUDA Driver Version (>= 12.0) (Cuda version that gpu driver supported.)
 
  
- <details open>
+ <details close>
 <summary>How To Check Nvidia GPU Driver</summary>
 
 Use command line and consult nvidia-smi utility to reveal NVIDIA driver version:
