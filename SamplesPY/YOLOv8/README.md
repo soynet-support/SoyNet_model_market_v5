@@ -13,7 +13,20 @@ SoyNet YOLOv8 support YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s.
 
 #### NVIDIA Development Environment
 - TensorRT (= 8.6.0)
+ <details close>
+<summary>MORE INFO</summary>
+Actually, SoyNet needs only
 
+- libnvinfer.so
+- libnvinfer_builder_resource.so.8.6.0
+
+If you need an efficient way to run SoyNet, just include those files (from TensorRT SDK) in the lib folder.
+
+But due to Nvidia license policy, we cannot provide a portion of the TensorRT SDK.
+
+So technically, SoyNet doesn't need to install the TensorRT SDK.
+##### More about [SoyNet](https://soynet.io/).
+</details>
 
 CUDA version that GPU driver supports.
  - CUDA Driver Version (>= 12.0) (Cuda version that gpu driver supported.)
@@ -75,7 +88,7 @@ python download_soynet_weight.py
 * default of download path is `../../../mgmt/weights` but if you want to set download path, you can command `python download_soynet_weight.py --path [path]`
 #### Convert weight file to SoyNet weight file
 * You can skip this step, if you already have SoyNet weight file 
-<br/>([SoyNet_model_markey_v5](https://github.com/soynet-support/SoyNet_model_market_v5) already has YOLOv8s weights for SoyNet [here](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/mgmt/weights)).
+
 1.  Prepare standard weight file on [ultralytics](https://github.com/ultralytics/ultralytics#models) or your own one.
 2.  Convert weight file in step 1 to SoyNet weight file
   > - Open [weights folder](https://github.com/soynet-support/SoyNet_model_market_v5/tree/main/SamplesPY/YOLOv8/Weights).
@@ -106,5 +119,5 @@ python yolov8.py
 
 # Acknowlegement
 
-YOLOv5 is under GNU General Public License. 
+YOLOv8 is under GNU General Public License. 
 See License terms and condition: [License](https://github.com/ultralytics/ultralytics/blob/main/LICENSE)
