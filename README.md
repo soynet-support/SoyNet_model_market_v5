@@ -80,6 +80,7 @@
 #### NVIDA Development Environment
  
  - TensorRT (= 8.6.0)
+ `pip install tensorrt`
  <details close>
 <summary>MORE INFO</summary>
 Actually, SoyNet needs only
