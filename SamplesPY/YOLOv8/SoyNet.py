@@ -9,6 +9,7 @@ import platform
 import os
 if platform.system()=="Linux" :
     CDLL("libnvinfer.so", RTLD_GLOBAL)
+    CDLL("libcudart.so", RTLD_GLOBAL)
     lib=CDLL("libSoyNetV5.so", RTLD_GLOBAL)
 else : # "Windows"
     HOME = os.path.dirname(os.path.realpath(__file__)) + "\\..\\.."
