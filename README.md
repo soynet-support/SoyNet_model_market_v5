@@ -47,7 +47,7 @@
 ```
  - `engines` : it's made at the first time execution or when you modify the configs file.
  - `weights` : You can make .weights file from your own trained weight file(ex. *.pt) on ww.py in [weights folder](#folder-structure).
- - `license file` : Please contact [SoyNet](https://soynet.io/) if the time has passed.
+ - `license file` : Will be update soon
  
  ## SoyNet Function
  - `initSoyNet(.cfg, extend_param)` : Created a SoyNet handle.
