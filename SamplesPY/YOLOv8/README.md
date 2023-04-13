@@ -109,6 +109,7 @@ python download_soynet_weight.py
 
 #### How to run
 ```python
+export LD_LIBRARY_PATH=../../lib:$LD_LIBRARY_PATH
 python yolov8.py
 ```
 # Reference
