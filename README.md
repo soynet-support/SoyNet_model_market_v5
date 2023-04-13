@@ -81,7 +81,7 @@
  
  - TensorRT (= 8.6.0)
  <details close>
-<summary>more info</summary>
+<summary>MORE INFO</summary>
 Actually, SoyNet needs only
 
 - libnvinfer.so
