@@ -34,8 +34,8 @@ iou_thres=0.7
 region_count = 2000
 count_per_class = 30
 result_count = batch_size * count_per_class * class_count
-extend_param = "BATCH_SIZE=%d SOYNET_HOME=%s MODEL_NAME=%s MAKE_ENGINE=%d ENGINE_FILE=%s PLUGIN_DIR=%s CLASS_COUNT=%d CONF_THRES=%f IOU_THRES=%f REGION_COUNT=%d COUNT_PER_CLASS=%d RESULT_COUNT=%d WEIGHT_FILE=%s RE_SIZE=%d,%d ORG_SIZE=%d,%d TOP=%d BOTTOM=%d LEFT=%d RIGHT=%d"%(
-        batch_size, soynet_home, model_name, make_engine, engine_file, plugin, class_count, conf_thres, iou_thres, region_count,
+extend_param = "BATCH_SIZE=%d SOYNET_HOME=%s MODEL_NAME=%s MAKE_ENGINE=%d ENGINE_FILE=%s CLASS_COUNT=%d CONF_THRES=%f IOU_THRES=%f REGION_COUNT=%d COUNT_PER_CLASS=%d RESULT_COUNT=%d WEIGHT_FILE=%s RE_SIZE=%d,%d ORG_SIZE=%d,%d TOP=%d BOTTOM=%d LEFT=%d RIGHT=%d"%(
+        batch_size, soynet_home, model_name, make_engine, engine_file, class_count, conf_thres, iou_thres, region_count,
         count_per_class, result_count, weight_file, ys.unpad_height, ys.unpad_width,
         org_height, org_width, ys.pad_top, ys.pad_bottom, ys.pad_left, ys.pad_right)
 
