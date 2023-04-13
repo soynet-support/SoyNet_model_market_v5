@@ -72,17 +72,13 @@ nvidia-smi
 
 
 # Start SoyNet Demo Examples
-
-### Installation
-* Follow step in [SoyNet_model_market_v5](https://github.com/soynet-support/SoyNet_model_market_v5/releases).
-* Do not forget downloading dll/so files and putting them in bin/lib folder(depends on OS).
-
 ### python
 ##### Install
 Make python environment. Python version does not matter.
 
 #### Download pre-trained weights files (already converted for SoyNet)
 ```python
+cd ./Weights
 python download_soynet_weight.py
 ```
 * default of download path is `../../../mgmt/weights` but if you want to set download path, you can command `python download_soynet_weight.py --path [path]`
