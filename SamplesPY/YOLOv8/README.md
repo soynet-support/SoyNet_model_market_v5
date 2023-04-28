@@ -95,7 +95,7 @@ python download_soynet_weight.py
   >	```
   > - Run ww.py on cmd as the following:
   >>	```python
-  >>	python ww.py --model [model_name]
+  >>	python ww.py --model [model_name] --load_path [path of original weight]
   >>	```
   >	- Supported model_name: YOLOv8l, YOLOv8m, YOLOv8n, and YOLOv8s
   >	- Output_file_path: "../../../mgmt/weights/%s.weights" %(file_name)
@@ -104,7 +104,7 @@ python download_soynet_weight.py
   >		```python ww.py -h```
   >   - Example for ww.py:
   > 		```
-  > 		python ww.py --model yolov8m
+  > 		python ww.py --model yolov8m --load_path ./chekpoint.pt
   > 		```
 
 #### How to run
