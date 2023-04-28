@@ -6,7 +6,7 @@ import sys
 def main():
     parser = ArgumentParser()
     parser.add_argument("--model", help="yolov8m, yolov8l, yolov8s, yolov8n, yolov8m-seg", type=str, default='yolov8m')
-    # parser.add_argument("--load_path", help="path of orignal weight", type=str, default='./yolov8m.pt')
+    parser.add_argument("--load_path", help="path of orignal weight", type=str)
     # parser.add_argument("--weight_path", help="path of saving Soynet weight file", type=str, default='../yolo.weights')
     args = parser.parse_args()
 
@@ -14,7 +14,7 @@ def main():
 
     
     model_name = args.model
-    pytorch_weight_path = "%s.pt"%(model_name)
+    pytorch_weight_path = args.load_path
     soynet_weight_path = "../../../mgmt/weights/%s.weights"%(model_name)
 
     print(pytorch_weight_path, soynet_weight_path)
