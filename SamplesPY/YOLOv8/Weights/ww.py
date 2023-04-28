@@ -27,7 +27,7 @@ def main():
         for idx, (key,value) in enumerate(weights.items()) :
             wv = value.cpu().data.numpy().flatten()
             print(idx, key, value.shape, wv[:3])
-        #exit()
+        exit()
 
     with open(soynet_weight_path, 'wb') as f:
         dumy = np.array([0] * 10, dtype=np.int32)
