@@ -1,0 +1,7 @@
+# Usage: pip install -r requirements.txt
+
+# Base ----------------------------------------
+numpy>=1.18.5
+torch>=1.7.0
+torchvision>=0.8.1
+argparse
