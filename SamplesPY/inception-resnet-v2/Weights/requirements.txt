@@ -1,8 +1,7 @@
 # Usage: pip install -r requirements.txt
-numpy==1.24.3
-torch==1.11.0
-torchvision==0.12.0
-tqdm==4.65.0
-opencv-python
 
-#after pip install -r requirements.txt -> pip install git+https://github.com/facebookresearch/detectron2.git
+# Base ----------------------------------------
+numpy>=1.18.5
+torch>=1.7.0
+torchvision>=0.8.1
+argparse
